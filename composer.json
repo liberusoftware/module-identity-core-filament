@@ -1,5 +1,5 @@
 {
-  "name": "liberusoftware/identity-filament",
+  "name": "liberusoftware/identity-core-filament",
   "description": "Filament administration adapter for the configured Liberu identity model.",
   "type": "liberu-module",
   "license": "MIT",
@@ -15,10 +15,10 @@
   },
   "extra": {
     "liberu": {
-      "name": "identity-filament"
+      "name": "identity-core-filament"
     }
   },
-  "version": "1.0.4",
+  "version": "1.1.0",
   "autoload-dev": {
     "psr-4": {
       "Liberu\\Foundation\\IdentityFilament\\Tests\\": "tests/"
