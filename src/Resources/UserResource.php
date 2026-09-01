@@ -28,12 +28,16 @@ class UserResource extends Resource
         return config('auth.providers.users.model');
     }
 
+    #[\Override]
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-user-group';
 
+    #[\Override]
     protected static string|\UnitEnum|null $navigationGroup = 'Administration';
 
+    #[\Override]
     protected static ?string $navigationLabel = 'Users';
 
+    #[\Override]
     protected static ?string $recordTitleAttribute = 'name';
 
     /**
@@ -60,8 +64,8 @@ class UserResource extends Resource
                 TextInput::make('password')
                     ->password()
                     ->dehydrateStateUsing(fn (string $state) => Hash::make($state))
-                    ->dehydrated(fn (?string $state) => filled($state))
-                    ->required(fn (string $operation) => $operation === 'create')
+                    ->dehydrated(fn (?string $state): bool => filled($state))
+                    ->required(fn (string $operation): bool => $operation === 'create')
                     ->maxLength(255)
                     ->helperText('Leave blank to keep the current password.'),
                 DateTimePicker::make('email_verified_at')

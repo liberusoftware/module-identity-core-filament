@@ -8,6 +8,7 @@ use Liberu\Foundation\IdentityFilament\Resources\UserResource;
 
 class EditUser extends EditRecord
 {
+    #[\Override]
     protected static string $resource = UserResource::class;
 
     /**
