@@ -7,6 +7,5 @@ use Liberu\Foundation\IdentityFilament\Resources\UserResource;
 
 class CreateUser extends CreateRecord
 {
-    #[\Override]
     protected static string $resource = UserResource::class;
 }

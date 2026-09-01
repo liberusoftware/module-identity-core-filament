@@ -8,7 +8,6 @@ use Liberu\Foundation\IdentityFilament\Resources\UserResource;
 
 class ListUsers extends ListRecords
 {
-    #[\Override]
     protected static string $resource = UserResource::class;
 
     /**
