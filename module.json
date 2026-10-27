@@ -3,14 +3,16 @@
   "name": "identity-core-filament",
   "display_name": "Identity Administration",
   "description": "Optional Filament user and role administration surface.",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "category": "presentation",
   "provider": "Liberu\\Foundation\\IdentityFilament\\IdentityFilamentServiceProvider",
   "requires": {
     "php": "^8.5",
     "laravel": "^13.0",
     "packages": {
-      "liberusoftware/roles-permissions": "^1.0"
+      "liberusoftware/organizations-teams": "^1.0",
+      "liberusoftware/roles-permissions": "^1.0",
+      "liberusoftware/filament-clusters-contracts": "^1.0"
     }
   },
   "suggests": [],
